@@ -49,4 +49,4 @@ tidy.molten <- tidy_data_set %>% melt(measure.vars = names(one_data_set)[mean_st
 tidy <- dcast(tidy.molten,subject+activity+activity_name ~ variable,mean)
 
 # write that file for upload
-write.csv(tidy,file="tidy.txt")
+write.csv(tidy,file="tidy.txt",row.names = FALSE)
